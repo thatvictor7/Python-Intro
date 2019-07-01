@@ -19,11 +19,15 @@ def main():
     iterator()
 
 def iterator():
+    # Prints table header
     print("Seconds \t Meters")
-    for iteration in range(MIN, MAX):
-        print(float(iteration), "\t\t", falling_distance(iteration))
+    # For loop starts at 1, ends at 10
+    for i in range(MIN, MAX):
+        # Passes second to function that calculates falling distance
+        print(float(i), "\t\t", falling_distance(i))
 
 def falling_distance(time):
+    # Declared variable that holds formula with argument(seconds) and constants, returns results to be printed
     distance = (MULTIPLIER * G) * (time ** POWER)
     return distance
 
