@@ -12,8 +12,7 @@ def main():
 def open_file():
     golf_file = open("golf.dat", "r")
     for player in golf_file:
-        player.replace("\n", "")
-        print("Player Name:", player.replace(",", " Score: "))
+        print("Player Name:", player.replace(",", " Score: ").strip("\n"))
     golf_file.close
 
 main()
